@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-canvas" width="960" height="300" class="svg-canvas">
+   <g transform="translate(54.7578125, 20)">
+     <g class="output">
+      <g class="clusters"></g>
+      <g class="edgePaths">
+         <g class="edgePath" style="opacity: 1;">
+            <path class="path" d="M372.9296875,28.568617447707894L199,74L199,112" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead26)" style="fill: none;"></path>         
+            <defs>
+               <marker id="arrowhead26" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+               </marker>
+            </defs>
+         </g>
+         <g class="edgePath" style="opacity: 1;">
+            <path class="path" d="M453.8515625,28.568617447707894L627.78125,74L627.78125,112" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead27)" style="fill: none;"></path>
+               <defs>
+                   <marker id="arrowhead27" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+                      <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                   </marker>
+               </defs>
+          </g>
+          <g class="edgePath" style="opacity: 1;">
+              <path class="path" d="M161,144.47619047619048L52,186L52,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead28)" style="fill: none;"></path>
+              <defs>
+                 <marker id="arrowhead28" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                 </marker>
+              </defs>
+          </g>
+          <g class="edgePath" style="opacity: 1;">
+              <path class="path" d="M199,148L199,186L199,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead29)" style="fill: none;"></path>
+              <defs>
+                 <marker id="arrowhead29" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                 </marker>
+              </defs>
+           </g>
+           <g class="edgePath" style="opacity: 1;">
+              <path class="path" d="M582.78125,148L487.78125,186L487.78125,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead30)" style="fill: none;"></path>
+              <defs>
+              	<marker id="arrowhead30" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              		<path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                </marker></defs>
+            </g>
+            <g class="edgePath" style="opacity: 1;">
+            	<path class="path" d="M627.78125,148L627.78125,186L627.78125,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead31)" style="fill: none;"></path>
+            	<defs>
+            		<marker id="arrowhead31" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+            			<path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+            		</marker>
+            	</defs>
+            </g>
+            <g class="edgePath" style="opacity: 1;">
+            	<path class="path" d="M672.78125,147.14285714285714L774.78125,186L774.78125,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead32)" style="fill: none;"></path>
+            	<defs>
+            		<marker id="arrowhead32" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+            			<path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+            		</marker>
+            	</defs>
+            </g>
+            <g class="edgePath" style="opacity: 1;">
+            	<path class="path" d="M237,144.7377989395087L343.390625,186L343.390625,224" marker-end="url(http://localhost:8080/terminal1/demo_tree.jsp?uniqueId=1538085794#arrowhead33)" style="fill: none;"></path>
+            	<defs>
+            		<marker id="arrowhead33" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+            		<path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+            		</marker>
+            	</defs>
+            </g>
+        </g>
+        <g class="edgeLabels">
+           <g class="edgeLabel" transform="translate(230.5546875,74)" style="opacity: 1;">
+        	  <g transform="translate(-26.5546875,-8)" class="label">
+        	     <text>
+        	       <tspan xml:space="preserve" dy="1em" x="1">cmd.exe</tspan>
+        	     </text>
+        	  </g>
+           </g>
+           <g class="edgeLabel" transform="translate(667.125,74)" style="opacity: 1;">
+              <g transform="translate(-34.34375,-8)" class="label">
+                 <text><tspan xml:space="preserve" dy="1em" x="1">registe.exe</tspan></text>
+              </g>
+           </g>
+           <g class="edgeLabel" transform="translate(83.671875,186)" style="opacity: 1;">
+           	  <g transform="translate(-26.671875,-8)" class="label">
+           	  	 <text><tspan xml:space="preserve" dy="1em" x="1">task.exe</tspan></text>
+           	  </g>
+           </g>
+           <g class="edgeLabel" transform="translate(234.453125,186)" style="opacity: 1;">
+              <g transform="translate(-30.453125,-8)" class="label">
+              	 <text><tspan xml:space="preserve" dy="1em" x="1">cmd1.exe</tspan></text>
+              </g>
+           </g>
+           <g class="edgeLabel" transform="translate(515.84375,186)" style="opacity: 1;">
+               <g transform="translate(-23.0625,-8)" class="label">
+                   <text><tspan xml:space="preserve" dy="1em" x="1">net.exe</tspan></text>
+               </g>
+            </g>
+            <g class="edgeLabel" transform="translate(669.0703125,186)" style="opacity: 1;">
+               <g transform="translate(-36.2890625,-8)" class="label">
+                  <text><tspan xml:space="preserve" dy="1em" x="1">module.exe</tspan></text>
+               </g>
+            </g>
+            <g class="edgeLabel" transform="translate(817.6328125,186)" style="opacity: 1;">
+            	<g transform="translate(-37.8515625,-8)" class="label">
+            	    <text><tspan xml:space="preserve" dy="1em" x="1">desktop.exe</tspan></text>
+            	</g>
+            </g>
+            <g class="edgeLabel" transform="translate(375.3515625,186)" style="opacity: 1;">
+               <g transform="translate(-26.9609375,-8)" class="label">
+                  <text><tspan xml:space="preserve" dy="1em" x="1">net1.exe</tspan></text>
+               </g>
+            </g>
+         </g>
+         <g class="nodes">
+         	<g class="node top" transform="translate(413.390625,18)" style="opacity: 1;">
+         		<rect rx="30" ry="30" x="-40.4609375" y="-18" width="80.921875" height="36"></rect>
+         		<g class="label" transform="translate(0,0)">
+         			<g transform="translate(-30.4609375,-8)">
+         				<text><tspan xml:space="preserve" dy="1em" x="1">setup.exe</tspan></text>
+         			</g>
+         		</g>
+         	</g>
+            <g class="node file" transform="translate(199,130)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-38" y="-18" width="76" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-28,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">自我复制</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node registe" transform="translate(627.78125,130)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-45" y="-18" width="90" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-35,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">修改注册表</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node process" transform="translate(52,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-52" y="-18" width="104" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-42,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">结束系统进程</tspan></text>
+            	    </g>
+            	</g>
+            </g>
+            <g class="node alarm" transform="translate(199,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-45" y="-18" width="90" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-35,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">跨进程启动</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node net" transform="translate(487.78125,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-45" y="-18" width="90" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-35,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">跨进程启动</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node module" transform="translate(627.78125,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-45" y="-18" width="90" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-35,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">跨进程启动</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node file" transform="translate(774.78125,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-52" y="-18" width="104" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-42,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">结束系统进程</tspan></text>
+            		</g>
+            	</g>
+            </g>
+            <g class="node net" transform="translate(343.390625,242)" style="opacity: 1;">
+            	<rect rx="5" ry="5" x="-49.390625" y="-18" width="98.78125" height="36"></rect>
+            	<g class="label" transform="translate(0,0)">
+            		<g transform="translate(-39.390625,-8)">
+            			<text><tspan xml:space="preserve" dy="1em" x="1">复写系统exe</tspan></text>
+            		</g>
+            	</g>
+            </g>
+         </g>
+      </g>
+    </g>
+</svg>

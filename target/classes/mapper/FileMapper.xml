@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.xgs.dao.FileDao">
+	<select id="findFileByPageAndUser" resultMap="FileResultMap">
+		SELECT file.*,sys.alertsystembase_uniqueid FROM fileinfo file 
+		left join file_alertsystembase_uniqueid sys on file.uniqueid=sys.file_uniqueid
+		<where>
+			<if test="username!='admin'">
+				username=#{username}
+			</if>
+		</where>
+		GROUP BY file.uniqueid ORDER BY file.id ASC LIMIT #{0},#{1}
+	</select>
+	<resultMap id="FileResultMap" type="com.xgs.entity.Fileinfo">
+	  <result property="id" column="id"/>
+	  <result property="username" column="username"/>   
+	  <result property="fileName" column="fileName"/> 
+	  <result property="filePath" column="filePath"/> 
+	  <result property="state" column="state"/> 
+	  <result property="time" column="time"/>    
+		<association  property="file_alertsystembase_uniqueid" javaType="com.xgs.entity.File_alertsystembase_uniqueid">  
+        	 <id property="file_uniqueid" column="uniqueid" />     	 
+        	 <result property="alertsystembase_uniqueid" column="alertsystembase_uniqueid"/>
+        </association >  
+	</resultMap>
+	
+	<select id="countFile" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM fileinfo
+		<where>
+			<if test="username!='admin'">
+				username=#{username}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addUniqueid" parameterType="com.xgs.entity.File_alertsystembase_uniqueid">
+		INSERT INTO file_alertsystembase_uniqueid(file_uniqueid,alertsystembase_uniqueid) VALUES(#{file_uniqueid},#{alertsystembase_uniqueid})
+	</insert>
+	
+	<update id="modifyFileinfo" parameterType="com.xgs.entity.Fileinfo">
+		UPDATE fileinfo SET state=#{0} WHERE uniqueid=#{1}
+	</update>
+	
+	<select id="countFileUniqueid" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM fileinfo WHERE uniqueid=#{file_uniqueid}
+	</select>
+	
+	<select id="findFileSystemUniqueid" parameterType="String" resultType="com.xgs.entity.File_alertsystembase_uniqueid">
+		SELECT * FROM file_alertsystembase_uniqueid WHERE file_uniqueid=#{file_uniqueid}
+	</select>
+	
+	<update id="modifyAlertsystembaseUniqueid" parameterType="com.xgs.entity.File_alertsystembase_uniqueid">
+		UPDATE file_alertsystembase_uniqueid SET alertsystembase_uniqueid=#{alertsystembase_uniqueid} WHERE file_uniqueid=#{file_uniqueid}
+	</update>  
+	
+	<delete id="deleteAlertsystembaseUniqueid" parameterType="com.xgs.entity.File_alertsystembase_uniqueid">
+		DELETE FROM file_alertsystembase_uniqueid WHERE file_uniqueid=#{file_uniqueid}
+	</delete>
+	
+	<insert id="saveFile" parameterType="String">
+		INSERT INTO fileinfo(uniqueid,username,filename,filepath,state,time) VALUES(#{0},#{1},#{2},#{3},#{4},#{5})
+	</insert>
+	
+	<delete id="deleteFileById" parameterType="int">
+		DELETE FROM fileinfo WHERE id=#{id}
+	</delete>
+	
+	<select id="findFileById" parameterType="int" resultMap="FileResultMap">
+		SELECT file.*,sys.alertsystembase_uniqueid FROM fileinfo file 
+		left join file_alertsystembase_uniqueid sys on file.uniqueid=sys.file_uniqueid
+		WHERE file.id=#{id}
+	</select>
+	
+</mapper>
+
+
+
+
+

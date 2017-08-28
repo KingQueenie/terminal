@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.xgs.dao.DetailsTestDao">
+	<!-- 文件操作详情 -->
+	<select id="findFileSysteminfoByUniqueId" parameterType="int" resultType="com.xgs.entity.FileSysteminfo">
+		SELECT * FROM filesysteminfo WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countFileSystem" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM filesysteminfo WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findFileSysteminfoByElements" resultType="com.xgs.entity.FileSysteminfo">
+		SELECT * FROM filesysteminfo WHERE uniqueId=#{2}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		<if test="removable!=0">AND removable=#{removable}</if>
+		 AND filePath LIKE CONCAT('%',#{filePath},'%')  
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND processPath LIKE CONCAT('%',#{processPath},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countFileSysteminfoByElements" resultType="int">
+		SELECT COUNT(*) FROM filesysteminfo WHERE uniqueId=#{0}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		<if test="removable!=0">AND removable=#{removable}</if>
+		 AND filePath LIKE CONCAT('%',#{filePath},'%')  
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND processPath LIKE CONCAT('%',#{processPath},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%')
+	</select>
+	<!-- 文件map操作详情 -->
+	<select id="findFileSystemMapinfoByUniqueId" parameterType="int" resultType="com.xgs.entity.FileSysteminfo">
+		SELECT * FROM filesysteminfo WHERE uniqueId=#{2} AND (opType=7 OR opType=8) ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countFileSystemMap" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM filesysteminfo WHERE uniqueId=#{uniqueId} AND (opType=7 OR opType=8)
+	</select>
+	<select id="findFileSystemMapinfoByElements" resultType="com.xgs.entity.FileSysteminfo">
+		SELECT * FROM filesysteminfo WHERE uniqueId=#{2}
+		<if test="opType==0">AND (opType=7 OR opType=8)</if>
+		<if test="opType!=0">AND opType=#{opType}</if>
+		<if test="removable!=0">AND removable=#{removable}</if>
+		 AND filePath LIKE CONCAT('%',#{filePath},'%')  
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND processPath LIKE CONCAT('%',#{processPath},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countFileSystemMapinfoByElements" resultType="int">
+		SELECT COUNT(*) FROM filesysteminfo WHERE uniqueId=#{0}
+		<if test="opType==0">AND (opType=7 OR opType=8)</if>
+		<if test="opType!=0">AND opType=#{opType}</if>
+		<if test="removable!=0">AND removable=#{removable}</if>
+		 AND filePath LIKE CONCAT('%',#{filePath},'%')  
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND processPath LIKE CONCAT('%',#{processPath},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%')
+	</select>
+	<!-- 网络使用信息 -->
+	<select id="findNetinfoByUniqueId" parameterType="int" resultType="com.xgs.entity.Netinfo">
+		SELECT * FROM netinfo WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countNetinfo" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM netinfo WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findNetinfoByElements" resultType="com.xgs.entity.Netinfo">
+		SELECT * FROM netinfo WHERE uniqueId=#{2}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="dataProtocol!=null">AND dataProtocol LIKE CONCAT('%',#{dataProtocol},'%')</if>  
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countNetinfoByElements" resultType="int">
+		SELECT COUNT(*) FROM netinfo WHERE uniqueId=#{0}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="dataProtocol!=null">AND dataProtocol LIKE CONCAT('%',#{dataProtocol},'%')</if> 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+	</select>
+	<!-- 注册表基本信息 -->
+	<select id="findReginfoByUniqueId" parameterType="int" resultType="com.xgs.entity.Reginfo">
+		SELECT * FROM reginfo WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countReginfo" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM reginfo WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findReginfoByElements" resultType="com.xgs.entity.Reginfo">
+		SELECT * FROM reginfo WHERE uniqueId=#{2}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processId!=null">AND processId LIKE CONCAT('%',#{processId},'%')</if> 
+		 AND regPath LIKE CONCAT('%',#{regPath},'%')  
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countReginfoByElements" resultType="int">
+		SELECT COUNT(*) FROM reginfo WHERE uniqueId=#{0}
+		<if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processId!=null">AND processId LIKE CONCAT('%',#{processId},'%')</if> 
+		 AND regPath LIKE CONCAT('%',#{regPath},'%')  
+		 AND time LIKE CONCAT('%',#{time},'%') 
+	</select>
+	<!-- 注册表赋值操作 -->
+	<select id="findSetregvaluekeyByUniqueId" parameterType="int" resultType="com.xgs.entity.Setregvaluekey">
+		SELECT * FROM setregvaluekey WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countSetregvaluekey" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM setregvaluekey WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findSetregvaluekeyByElements" resultType="com.xgs.entity.Setregvaluekey">
+		SELECT * FROM setregvaluekey WHERE uniqueId=#{2}
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processID!=null">AND processID LIKE CONCAT('%',#{processID},'%')</if> 
+		 AND keyValue LIKE CONCAT('%',#{keyValue},'%')
+		 AND regPath LIKE CONCAT('%',#{regPath},'%')  
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countSetregvaluekeyByElements" resultType="int">
+		SELECT COUNT(*) FROM setregvaluekey WHERE uniqueId=#{0}
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processID!=null">AND processID LIKE CONCAT('%',#{processID},'%')</if> 
+		 AND keyValue LIKE CONCAT('%',#{keyValue},'%')
+		 AND regPath LIKE CONCAT('%',#{regPath},'%')  
+		 AND time LIKE CONCAT('%',#{time},'%') 
+	</select>
+	<!-- 进程操作信息 -->
+	<select id="findProcessoperationByUniqueId" parameterType="int" resultType="com.xgs.entity.Processoperation">
+		SELECT * FROM processoperation WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countProcessoperation" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM processoperation WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findProcessoperationByElements" resultType="com.xgs.entity.Processoperation">
+		SELECT * FROM processoperation WHERE uniqueId=#{2}
+		 <if test="opType!=0">AND opType=#{opType}</if>
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND objectProcessName LIKE CONCAT('%',#{objectProcessName},'%') 
+		 <if test="objectProcessID!=null">AND objectProcessID LIKE CONCAT('%',#{objectProcessID},'%')</if> 		 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countProcessoperationByElements" resultType="int">
+		SELECT COUNT(*) FROM processoperation WHERE uniqueId=#{0}
+		 <if test="opType!=0">AND opType=#{opType}</if>
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND objectProcessName LIKE CONCAT('%',#{objectProcessName},'%') 
+		 <if test="objectProcessID!=null">AND objectProcessID LIKE CONCAT('%',#{objectProcessID},'%')</if>  		 
+		 AND time LIKE CONCAT('%',#{time},'%')  
+	</select>
+	<!-- 进程操作线程信息 -->
+	<select id="findCreatethreadByUniqueId" parameterType="int" resultType="com.xgs.entity.Createthread">
+		SELECT * FROM createthread WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countCreatethread" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM createthread WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findCreatethreadByElements" resultType="com.xgs.entity.Createthread">
+		SELECT * FROM createthread WHERE uniqueId=#{2}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND targetProcessName LIKE CONCAT('%',#{targetProcessName},'%') 
+		 <if test="targetProcessID!=null">AND targetProcessID LIKE CONCAT('%',#{targetProcessID},'%')</if> 		 
+		 AND threadHandle LIKE CONCAT('%',#{threadHandle},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countCreatethreadByElements" resultType="int">
+		SELECT COUNT(*) FROM createthread WHERE uniqueId=#{0}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND targetProcessName LIKE CONCAT('%',#{targetProcessName},'%') 
+		 <if test="targetProcessID!=null">AND targetProcessID LIKE CONCAT('%',#{targetProcessID},'%')</if> 		 
+		 AND threadHandle LIKE CONCAT('%',#{threadHandle},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+	</select>
+	<!-- 挂起线程操作信息 -->
+	<select id="findPendingthreadByUniqueId" parameterType="int" resultType="com.xgs.entity.Pendingthread">
+		SELECT * FROM pendingthread WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countPendingthread" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM pendingthread WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findPendingthreadByElements" resultType="com.xgs.entity.Pendingthread">
+		SELECT * FROM pendingthread WHERE uniqueId=#{2}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND dependProcessName LIKE CONCAT('%',#{dependProcessName},'%')  		 
+		 AND dependProcessID LIKE CONCAT('%',#{dependProcessID},'%') 
+		 AND pendingProcessID LIKE CONCAT('%',#{pendingProcessID},'%')
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countPendingthreadByElements" resultType="int">
+		SELECT COUNT(*) FROM pendingthread WHERE uniqueId=#{0}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND dependProcessName LIKE CONCAT('%',#{dependProcessName},'%')  		 
+		 AND dependProcessID LIKE CONCAT('%',#{dependProcessID},'%') 
+		 AND pendingProcessID LIKE CONCAT('%',#{pendingProcessID},'%')
+		 AND time LIKE CONCAT('%',#{time},'%')
+	</select>
+	<!-- 恢复线程操作信息 -->
+	<select id="findRecoverthreadByUniqueId" parameterType="int" resultType="com.xgs.entity.Recoverthread">
+		SELECT * FROM recoverthread WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countRecoverthread" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM recoverthread WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findRecoverthreadByElements" resultType="com.xgs.entity.Recoverthread">
+		SELECT * FROM recoverthread WHERE uniqueId=#{2}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND dependProcessName LIKE CONCAT('%',#{dependProcessName},'%')  		 
+		 AND dependProcessID LIKE CONCAT('%',#{dependProcessID},'%') 
+		 AND pendingProcessID LIKE CONCAT('%',#{pendingProcessID},'%')
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countRecoverthreadByElements" resultType="int">
+		SELECT COUNT(*) FROM recoverthread WHERE uniqueId=#{0}
+		 AND currentProcessName LIKE CONCAT('%',#{currentProcessName},'%') 
+		 <if test="currentProcessID!=null">AND currentProcessID LIKE CONCAT('%',#{currentProcessID},'%')</if> 
+		 AND dependProcessName LIKE CONCAT('%',#{dependProcessName},'%')  		 
+		 AND dependProcessID LIKE CONCAT('%',#{dependProcessID},'%') 
+		 AND pendingProcessID LIKE CONCAT('%',#{pendingProcessID},'%')
+		 AND time LIKE CONCAT('%',#{time},'%')
+	</select>
+	<!-- 模块操作 -->
+	<select id="findModuleByUniqueId" parameterType="int" resultType="com.xgs.entity.Module">
+		SELECT * FROM module WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countModule" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM module WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findModuleByElements" resultType="com.xgs.entity.Module">
+		SELECT * FROM module WHERE uniqueId=#{2}
+		 <if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processNum!=null">AND processNum LIKE CONCAT('%',#{processNum},'%')</if> 
+		 AND regeditName LIKE CONCAT('%',#{regeditName},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countModuleByElements" resultType="int">
+		SELECT COUNT(*) FROM module WHERE uniqueId=#{0}
+		 <if test="opType!=0">AND opType=#{opType}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 <if test="processNum!=null">AND processNum LIKE CONCAT('%',#{processNum},'%')</if> 
+		 AND regeditName LIKE CONCAT('%',#{regeditName},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%')  
+	</select>
+	<!-- 告警信息 -->
+	<select id="findAlarminfoByUniqueId" parameterType="int" resultType="com.xgs.entity.Alarminfo">
+		SELECT * FROM alarminfo WHERE uniqueId=#{2} ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countAlarminfo" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM alarminfo WHERE uniqueId=#{uniqueId}
+	</select>
+	<select id="findAlarminfoByElements" resultType="com.xgs.entity.Alarminfo">
+		SELECT * FROM alarminfo WHERE uniqueId=#{2}
+		 <if test="type!=0">AND type=#{type}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND path LIKE CONCAT('%',#{path},'%') 
+		 AND explain1 LIKE CONCAT('%',#{explain1},'%') 
+		 AND explain2 LIKE CONCAT('%',#{explain2},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%') 
+		 ORDER BY id ASC LIMIT #{0},#{1}
+	</select>
+	<select id="countAlarminfoByElements" resultType="int">
+		SELECT COUNT(*) FROM alarminfo WHERE uniqueId=#{0}
+		 <if test="type!=0">AND type=#{type}</if>
+		 AND processName LIKE CONCAT('%',#{processName},'%') 
+		 AND path LIKE CONCAT('%',#{path},'%') 
+		 AND explain1 LIKE CONCAT('%',#{explain1},'%') 
+		 AND explain2 LIKE CONCAT('%',#{explain2},'%') 
+		 AND time LIKE CONCAT('%',#{time},'%')  
+	</select>
+	<!-- 样本检测报告 -->
+	<select id="findBehavior" resultType="com.xgs.entity.Behavior">
+		SELECT * FROM behavior
+	</select>
+	<select id="countBehavior" resultType="int">
+		SELECT COUNT(*) FROM behavior
+	</select>
+</mapper>

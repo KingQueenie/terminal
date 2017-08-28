@@ -1,0 +1,145 @@
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    padding:0;
+}
+.search_tab .form-group{
+    margin-bottom:15px;
+}
+.main{
+    height:90%;
+}
+.main:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/*左侧菜单栏*/
+.leftHand{
+    width:217px;height:100%;
+    background: #303642;
+    font-size: 18px;
+    position: fixed;
+}
+.subNavBox{
+    width:100%;
+    cursor:pointer;
+    padding-top:10px;
+}
+.subNav{
+    cursor:pointer;
+    background-position:95% 50%;
+    padding:5px;
+    position: relative;
+}
+.subNav:hover{
+    color:#277fc2;
+}
+.subNav a{
+    text-decoration:none;
+    color:#fff;
+}
+.pullDown{
+    font-size:5px;
+    position: absolute;
+    top:18px;right:7px;
+}
+.leftHand .glyphicon{
+    color:#fff;
+    margin: 0 8px 0 12px;
+}
+.sub_title{
+    font-size:0.9em;
+    font-family:"微软雅黑";
+    color:#fff;
+    height:40px;
+    line-height:40px;
+}
+.currentDd{
+    color:#277fc2
+}
+.currentDt{
+    /*background:#362f2d;*/
+    background:#262B35;
+}
+.navContent{
+    display: none;
+    width: 100%;
+}
+.leftArrow{
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-right: 9px solid;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    color:#e6e8ea;
+    top:4px;right:-5px;
+    position:absolute;
+    display:none;
+}
+.leftArrow1{
+    top:14px;right:0px;
+}
+.navContent li{
+    width: 100%;
+    position:relative;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.navContent li a{
+    display:block;
+    width:100%;
+    height:30px;
+    font-size:0.7em;
+    line-height:30px;
+    color:#fff;
+    margin-left:25px;
+    text-decoration:none;
+}
+.navContent li:hover{
+    background-color:#000;
+}
+.navContent li a:hover{
+    text-decoration:none;
+}
+/*检测详情*/
+.detailContent{
+    overflow:hidden;
+    margin-left: 217px;
+    height:100%;
+    margin-top:-9px;
+}
+.detailContent iframe{
+	width:100%;height:100%;
+	border:0;
+	margin:0;
+}
+.search_tab{
+    width:95%;
+    margin:16px auto;
+    background: #f5f5f5;
+    border:1px solid #ddd;
+    color:#333;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-top:15px;
+    box-sizing: border-box;
+}
+.detailDetect{
+    width:95%;
+    margin:12px auto;
+    box-sizing: border-box;
+}
+.detailDetect h4{
+	font-size:16px;
+}
+.detailDetect table{
+	word-wrap:break-word;
+}
+.detailDetect table th{
+	font-size:16px;
+}
+.detailDetect table td{
+	text-align:center;
+	vertical-align: middle;
+}

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.xgs.dao.UserDao">
+	<select id="findByName" parameterType="String" resultType="com.xgs.entity.Login">
+		SELECT * FROM logininfo WHERE username=#{username}
+	</select>
+	<insert id="saveLogininfo" parameterType="com.xgs.entity.Login">
+		INSERT INTO logininfo VALUES (#{username},#{pwd},#{type},#{flag},#{group},#{last_change})
+	</insert>
+	<update id="modifyLogin" parameterType="com.xgs.entity.Login">
+		UPDATE logininfo SET pwd=#{pwd},last_change=#{last_change} WHERE username=#{username}
+	</update>
+	<select id="findByType" parameterType="int" resultType="String">
+		SELECT value FROM config WHERE type=#{type}
+	</select>
+	<select id="findByDateAndIp" parameterType="String" resultType="com.xgs.entity.Errlogin">
+		SELECT * FROM errlogininfo WHERE ip_addr=#{0} AND login_time &gt;= #{1} AND login_time &lt;= #{2}
+	</select>
+	<insert id="AddErrLoginInfo" parameterType="com.xgs.entity.Errlogin">
+		INSERT INTO errlogininfo(ip_addr,login_time,username) VALUES (#{ip_addr},#{login_time},#{username})
+	</insert>
+	<insert id="saveUser" parameterType="com.xgs.entity.User">
+		INSERT INTO user(username,pwd,age,gender,email,phone,nickname) VALUES (#{username},#{pwd},#{age},#{gender},#{email},#{phone},#{nickname})
+	</insert>
+	<select id="findByUsername" parameterType="String" resultType="com.xgs.entity.User">
+		SELECT * FROM user WHERE username=#{username}
+	</select>
+	<update id="modifyUser" parameterType="com.xgs.entity.User">
+		UPDATE user SET pwd=#{pwd} WHERE username=#{username}
+	</update>
+	<insert id="saveChangelog" parameterType="com.xgs.entity.Changelog">
+		INSERT INTO changelog(uniqueid,table_name,table_id,content,process_time,user) VALUES (#{uniqueid},#{table_name},#{table_id},#{content},#{process_time},#{user})
+	</insert>
+</mapper>
+
+
+
+
+

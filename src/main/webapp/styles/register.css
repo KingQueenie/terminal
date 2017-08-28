@@ -1,0 +1,104 @@
+body{
+    background-color:#016BA9;
+    overflow: hidden;
+    font-family:'微软雅黑';
+    font-size: 20px;
+    color:#fff;
+}
+.main{
+    width:480px;height:500px;
+    position:absolute;
+    top:50%;left:50%;
+    margin-left:-240px;
+    margin-top: -360px;
+}
+.wel{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom:35px;
+    font-family:'方正舒体';
+}
+.letter{
+    position:relative;
+    margin:35px 0;
+}
+.radio{
+    height: 33px;
+}
+div.letter label{
+    width:130px;
+    margin:0 5px 0 10px;
+    vertical-align: middle;
+    text-align: right;
+    float: left;
+}
+div.radio label.sex{
+    width:42px;
+    margin:0 45px 0 -8px;
+}
+input[type=text],input[type=password],input[type=email],input[type=tel]{
+    height:32px;width:260px;
+    padding:0 5px;
+    margin-top:-5px;
+    border:1px solid #ddd;
+    border-radius: 3px;
+    background: transparent;
+    color:#eee;
+    font-size: 18px;
+    line-height: 32px;
+}
+.warning{
+    color:#FA9B03;
+    font-size: 14px;
+    position:absolute;
+    top:38px;
+    left:148px;
+}
+.warning{
+    animation:emo .5s linear forwards;
+    -webkit-animation:emo .5s linear forwards;
+    -moz-animation:emo .5s linear forwards;
+    -o-animation:emo .5s linear forwards;
+}
+@keyframes emo{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-webkit-keyframes emo{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-moz-keyframes emo{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-o-keyframes emo{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+.reg{
+    color:#fff;
+    font-size: 13px;
+    position:absolute;
+    top:70px;
+    left:350px;
+}
+input[type=button]{
+    width:90px;
+    height:33px;
+    border:1px solid #016BA9;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:20px;
+    color:#016BA9;
+    margin-left:90px;
+    margin-top:10px;
+    transition:all 0.4s;
+    background: #eee;
+    line-height: 30px;
+}
+input[type=button]:hover{
+    background:#016BA9;
+    color:#fff;
+    border:1px solid #fff;
+}
